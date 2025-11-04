@@ -1,23 +1,23 @@
 <!-- === Maneesha Cooray | Embedded Systems & Linux Engineer === -->
 
-<div align="center">
+<h1 align="center">👋 Hi, I'm Maneesha Cooray</h1>
+<h3 align="center">Embedded Systems Engineer · Embedded Linux Developer · Kernel & Open Source Tinkerer</h3>
 
-# Maneesha Cooray
-**Embedded Systems Engineer · Embedded Linux & Kernel Developer · Open Source Enthusiast**
-
-[![GitHub](https://img.shields.io/badge/GitHub-maneeshacooray-181717?style=flat&logo=github)](https://github.com/maneeshacooray)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Maneesha%20Cooray-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/maneesha-cooray)
-[![Email](https://img.shields.io/badge/Email-maneeshacooray%40gmail.com-D14836?style=flat&logo=gmail)](mailto:maneeshacooray@gmail.com)
-![Profile Views](https://komarev.com/ghpvc/?username=maneeshacooray&style=flat&color=blue)
-
-</div>
+<p align="center">
+  <a href="https://github.com/maneeshacooray"><img src="https://komarev.com/ghpvc/?username=maneeshacooray&style=flat-square&color=blue" alt="Profile views" /></a>
+  <a href="mailto:maneeshacooray@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-orange?style=flat-square&logo=gmail" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/maneesha-cooray"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin" alt="LinkedIn" /></a>
+</p>
 
 ---
 
 ## About Me
 
-I am an **Embedded Systems and Linux Engineer** passionate about **kernel development**, **open-source software**, and **hardware–software integration**.
-My experience spans from **bare-metal firmware** to **custom Linux distributions**, focusing on performance, scalability, and reliability in connected devices.
+Hey, I’m Maneesha — a Sri Lankan **embedded systems engineer** who enjoys exploring that weird, wonderful space where software meets hardware.
+If it has a UART port, a bootloader, or a kernel panic, I’m interested.
+
+I spend my time building firmware, tinkering with Linux internals, and creating lightweight systems that do a lot with very little.
+I’ve worked on everything from **ESP32** boards and **RAK Wireless devices** to **BeagleBones** and **Khadas SBCs**, experimenting with how much performance and stability I can squeeze out of them.
 
 I work primarily with **ESP-IDF**, **Zephyr**, **Yocto**, and **Buildroot**, blending low-level engineering with modern languages such as **Rust** and **Zig** to build efficient and maintainable embedded systems.
 
@@ -46,7 +46,7 @@ I work primarily with **ESP-IDF**, **Zephyr**, **Yocto**, and **Buildroot**, ble
 |-----------|------------|
 | **Microcontrollers** | ESP32, STM32, ATmega328P, PIC16F87xA |
 | **Single Board Computers** | Raspberry Pi, Orange Pi, BeagleBone, Khadas, Banana Pi, Luckfox |
-| **IoT & Edge Devices** | RAK Wireless Modules, Espressif SoCs |
+| **IoT & Edge Devices** | RAK Wireless modules, Espressif SoCs |
 | **Frameworks / SDKs** | ESP-IDF, Zephyr RTOS, PlatformIO |
 | **Linux Tooling** | Yocto, Buildroot, OpenWRT, U-Boot |
 | **Networking** | MQTT, LoRaWAN, ChirpStack, BLE, Wi-Fi |
@@ -63,7 +63,7 @@ I work primarily with **ESP-IDF**, **Zephyr**, **Yocto**, and **Buildroot**, ble
 
 ---
 
-## Activity & Statistics
+## Activity & Stats
 
 <div align="center">
 
@@ -78,7 +78,7 @@ I work primarily with **ESP-IDF**, **Zephyr**, **Yocto**, and **Buildroot**, ble
 
 ---
 
-## Contact
+## Connect
 
 <div align="center">
 
@@ -91,6 +91,7 @@ I work primarily with **ESP-IDF**, **Zephyr**, **Yocto**, and **Buildroot**, ble
 ---
 
 <div align="center">
-  <sub><i>“Building smarter systems from the bits up.”</i></sub><br/>
+  <sub><i>“Building smarter systems from the bits up.”</i></sub><br/><br/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg" width="90" alt="Sri Lankan flag"/><br/>
   <sub>© 2025 Maneesha Cooray — Embedded Systems & Linux Engineer</sub>
 </div>
