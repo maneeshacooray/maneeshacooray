@@ -71,7 +71,7 @@ I work primarily with **ESP-IDF**, **Zephyr**, **Yocto**, and **Buildroot**, ble
   <img height="160" src="https://github-readme-stats.vercel.app/api?username=maneeshacooray&show_icons=true&theme=transparent&hide_border=true&count_private=true" alt="Maneesha's GitHub stats"/>
 </a>
 <a href="https://github.com/maneeshacooray">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=maneeshacooray&layout=compact&theme=transparent&hide_border=true" alt="Top Languages"/>
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=maneeshacooray&layout=compact&theme=transparent&hide_border=true&count_private=true" alt="Top Languages"/>
 </a>
 
 </div>
