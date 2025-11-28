@@ -1,0 +1,306 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0.15cm}
+
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Maneesha Cooray — Page \thepage{} of \pageref*{LastPage}}
+}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}
+
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\newenvironment{highlights}{
+\begin{itemize}[
+    topsep=0.10 cm,
+    parsep=0.10 cm,
+    partopsep=0pt,
+    itemsep=0pt,
+    leftmargin=0.4 cm + 10pt
+]}{
+\end{itemize}
+}
+
+\newenvironment{onecolentry}{
+\begin{adjustwidth}{0.2 cm}{0.2 cm}
+}{
+\end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+\onecolentry
+\def\secondColumn{#2}
+\setcolumnwidth{\fill, 4.5 cm}
+\begin{paracol}{2}
+}{
+\switchcolumn \raggedleft \secondColumn
+\end{paracol}
+\endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+\onecolentry
+\def\thirdColumn{#3}
+\setcolumnwidth{1 cm, \fill, 4.5 cm}
+\begin{paracol}{3}
+{\raggedright #2} \switchcolumn
+}{
+\switchcolumn \raggedleft \thirdColumn
+\end{paracol}
+\endonecolentry
+}
+
+% Define header environment
+\newenvironment{header}{
+    \begin{center}
+}{
+    \end{center}
+    \vspace{0.5cm}
+}
+
+% Define AND separator for header
+\newcommand{\AND}{%
+    \unskip
+    \hspace{0.1cm}
+    \textbar
+    \hspace{0.1cm}
+}
+
+\begin{document}
+
+% ========== HEADER ==========
+\begin{header}
+    \fontsize{30 pt}{30 pt}\selectfont
+    \textbf{Maneesha Cooray}
+
+    \vspace{0.3 cm}
+
+    \normalsize
+    \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Nugegoda, Sri Lanka}%
+    \kern 0.25 cm%
+    \AND
+    \kern 0.25 cm%
+    \mbox{\href{mailto:bmaneeshacooray@gmail.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}bmaneeshacooray@gmail.com}}%
+    \kern 0.25 cm%
+    \AND
+    \kern 0.25 cm%
+    \mbox{\href{tel:+94761790316}{{\footnotesize\faPhone*}\hspace*{0.13cm}+94 76 179 0316}}%
+    \kern 0.25 cm%
+    \AND
+    \kern 0.25 cm%
+    \mbox{\href{https://linkedin.com/in/maneesha-cooray}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}linkedin.com/in/maneesha-cooray}}%
+\end{header}
+
+% ========== SUMMARY ==========
+\section{Summary}
+
+\begin{onecolentry}
+Embedded Linux Engineer with proven expertise in \textbf{custom Linux distributions, kernel development, and BSP integration} across ARM/MIPS platforms. Specialised in building \textbf{high-performance, multi-threaded firmware} and \textbf{edge AI solutions} with RKNN-accelerated inference on Rockchip NPUs. Proficient in \textbf{Rust, C, C++, and Python}, with hands-on experience architecting \textbf{IoT ecosystems, gRPC microservices, and low-latency streaming pipelines}.
+
+Combining technical depth with business acumen through \textbf{MBA studies}, bridging engineering innovation and strategic decision-making to deliver scalable, production-ready embedded systems.
+\end{onecolentry}
+
+% ========== EXPERIENCE ==========
+\section{Experience}
+
+\begin{twocolentry}{July 2025 -- Present\\Atlas Labs}
+\textbf{Embedded Engineer --- Level I}
+\begin{highlights}
+    \item Architected and deployed custom \textbf{OpenWRT/Buildroot} Linux distributions for MIPS/ARMv7 SoCs, achieving 40\% faster boot times and optimised memory footprints for production IoT devices.
+    \item Engineered concurrent, multi-threaded applications in \textbf{Rust, C, and C++} with real-time performance guarantees for mission-critical embedded services.
+    \item Integrated \textbf{RKNN neural network models} with hardware-accelerated inference on Rockchip NPUs, enabling on-device AI capabilities for edge computing applications.
+    \item Designed and implemented \textbf{gRPC microservices} for secure, scalable device-to-cloud communication in distributed IoT architectures.
+    \item Built production-grade \textbf{RTP/UDP HLS streaming engines} with sub-100ms latency for real-time video applications.
+    \item Established CI/CD pipelines for automated testing and deployment of kernel modules, firmware, and Rust toolchains.
+\end{highlights}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{April 2024 -- July 2025\\Atlas Labs}
+\textbf{Associate Embedded Engineer}
+\begin{highlights}
+    \item Delivered end-to-end firmware solution for \textbf{GK7205V300 IP cameras}, including H.264/H.265 encoding, RTSP/HTTP servers, and custom middleware layers.
+    \item Integrated Rockchip kernel patches and BSP modifications, optimising multi-threaded video processing pipelines for 4K streaming.
+    \item Developed production-ready Rust interfaces for \textbf{I2C, SPI, UART, and RS-485} peripherals, ensuring type-safe hardware abstractions.
+    \item Created comprehensive CLI tools and debugging utilities in Rust/Python, reducing system diagnostics time by 60\%.
+\end{highlights}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Oct 2023 -- April 2024\\Atlas Labs}
+\textbf{Embedded Engineer Intern}
+\begin{highlights}
+    \item Designed KiCad PCB layouts; performed hardware validation and test automation.
+    \item Debugged CAN bus, power issues, and signal integrity faults.
+    \item Contributed to kernel bring-up: bootloader, DTS, and board initialisation.
+\end{highlights}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Dec 2022 -- Oct 2023\\Haleys Fentons}
+\textbf{Trainee Engineer}
+\begin{highlights}
+    \item Contributed to Dialog 830, the largest nationwide deployment completed by Fentons.
+    \item Coordinated subcontract teams and ensured compliance across multi-site projects.
+    \item Supported engineering and inspection for the \textbf{1.5MW Roccell Bathware solar project}.
+\end{highlights}
+\end{twocolentry}
+
+% ========== FREELANCE ==========
+\section{Freelance \& Projects}
+
+\begin{onecolentry}
+\begin{highlights}
+    \item \textbf{MasterChef Sri Lanka Clock Controller:} Designed and deployed precision timing hardware with wireless control for national TV production, ensuring split-second accuracy for live broadcast challenges.
+    \item \textbf{Automotive CAN Bus Reverse Engineering:} Led research initiative to reverse-engineer CAN bus protocols for Nissan Leaf and Outlander PHEV, successfully decoding battery management messages and developing CAN frame injection techniques to enable aftermarket battery upgrades with full dashboard integration and extended range display.
+    \item \textbf{Sirasa TV Game Show Control System:} Built a wireless RF-based control system for \textit{1 Million Money Drop} featuring real-time game logic processing and synchronised multi-door actuation.
+    \item \textbf{Edge AI Pipelines:} Architected neural network inference pipelines optimised for embedded deployment, achieving real-time performance on resource-constrained hardware.
+    \item \textbf{Pylontech BMS Monitoring System:} Developed an RS-485-based battery management monitoring solution with MQTT integration and cloud-connected IoT dashboards for real-time telemetry.
+    \item \textbf{Anlene Interactive Hardware:} Engineered interactive promotional hardware for a senior-focused marketing campaign, emphasising accessibility and user-friendly interfaces.
+    \item \textbf{Custom Yocto Builds:} Created tailored Linux distributions for Raspberry Pi and ARM SBCs, optimised for specific application requirements.
+    \item \textbf{UAV Control Simulation:} Modelled and simulated unmanned aerial vehicle control systems using MATLAB/Simulink for flight dynamics analysis.
+\end{highlights}
+\end{onecolentry}
+
+% ========== SKILLS ==========
+\section{Skills}
+
+\begin{onecolentry}
+\textbf{Programming:} C, C++, Rust, Zig, Python, Bash, MATLAB, VHDL
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Embedded Linux:} Buildroot, Yocto, OpenWRT, U-Boot, Kernel Config, Device Trees, BSPs
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{AI / Edge Computing:} Neural Networks, RKNN models, NPU optimisation
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Networking / IoT:} gRPC, MQTT, CoAP, HTTP/REST, RTSP, RTP, WebSockets
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Communication Protocols:} CAN, RS-485, I2C, SPI, UART, WiFi, BLE, LoRa, LoRaWAN
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Hardware \& Design:} KiCad, NI Multisim, Fusion360, PCB Debugging
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Microcontrollers:} ESP32, STM32, ATmega328P, PIC
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{SBCs / SoCs:} Raspberry Pi, Rockchip, Allwinner, Orange Pi, LuckFox
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Tools:} Git, Docker, CI/CD, Jira, Bitbucket, perf, strace, OpenOCD
+\end{onecolentry}
+
+\begin{onecolentry}
+\textbf{Business Skills:} MBA (in progress), project coordination, strategic thinking
+\end{onecolentry}
+
+% ========== EDUCATION ==========
+\section{Education}
+
+\begin{threecolentry}{\textbf{MBA}}{2025 -- Present}{}
+\textbf{Cardiff Metropolitan University}\\
+Master of Business Administration --- \textit{In Progress}
+\end{threecolentry}
+
+\vspace{0.1 cm}
+
+\begin{threecolentry}{\textbf{B.Eng (Hons.)}}{2024}{}
+\textbf{Liverpool John Moores University}\\
+Electronics \& Electrical Engineering --- First Class Honours
+\end{threecolentry}
+
+\vspace{0.1 cm}
+
+\begin{threecolentry}{\textbf{HND}}{2022}{}
+\textbf{SLIIT City University}\\
+Electronics \& Electrical Engineering
+\end{threecolentry}
+
+% ========== REFERENCES ==========
+\section{References}
+
+\begin{onecolentry}
+\textbf{Eng. Asanga Harshan}\\
+Senior Engineer, Solar Division\\
+Hayleys Fentons, Maradana, Colombo\\
+Sri Lanka Institute of Information Technology Academy (SLIITA)\\
+Email: \href{mailto:asanga.harshan@icloud.com}{asanga.harshan@icloud.com}\\
+Phone: +94 76 526 7751
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{center}
+\textit{Additional references are available upon request.}
+\end{center}
+
+\end{document}
